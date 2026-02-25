@@ -9,7 +9,13 @@ public class MailerStub implements Imailer {
         this.mensaje = mensaje;
     }
 
-    public boolean enviarCorreo(){
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+    public boolean enviarCorreo() {
+        System.out.println("========================================");
+        System.out.println("  Enviando correo:");
+        System.out.println("  Para: " + this.email);
+        System.out.println("  Mensaje: " + this.mensaje);
+        System.out.println("========================================");
+
+        return true;
     }
 }
