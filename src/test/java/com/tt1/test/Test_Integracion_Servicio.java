@@ -10,15 +10,16 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Test_Servicio {
+public class Test_Integracion_Servicio {
     private Servicio servicio;
-    private Mockmailer mailer;
-    private MockRepositorio repositorio;
+    private MailerStub mailer;
+    private Repositorio repositorio;
+    private DBStub db;
 
     @BeforeEach
     public void setUp() {
-        repositorio = new MockRepositorio();
-        mailer = new Mockmailer();
+        repositorio = new Repositorio(db);
+        mailer = new MailerStub("Pedro@gmail", "dfsdfdsf");
         servicio = new Servicio(repositorio, mailer);
     }
 

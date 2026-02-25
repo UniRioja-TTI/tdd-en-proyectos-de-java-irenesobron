@@ -1,11 +1,8 @@
 package com.tt1.test;
 import java.util.List;
 
-public class Repositorio {
+public class Repositorio implements Irepositorio {
     private DBStub db;
-
-    public Repositorio() {
-    }
 
     public Repositorio(DBStub db) {
         throw new UnsupportedOperationException("Clase aún no implementada.");

@@ -1,28 +1,37 @@
 package com.tt1.test;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Servicio {
-    private Repositorio repositorio;
-    private MailerStub mailer;
+    private final Irepositorio repositorio;
+    private final Imailer mailer;
 
-    private Servicio() {
-        throw new UnsupportedOperationException("Clase aún no implementada.");
+    public Servicio(Irepositorio repositorio, Imailer mailer) {
+        this.repositorio = repositorio;
+        this.mailer = mailer;
     }
 
-    public void CrearTodo(String nombre, Date dueDate){
+    public boolean crearTarea(String nombre, String desc, LocalDate fechaLimite) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
+
     }
-    public void AnadirEmail(String email){
+
+    public boolean agregarEmail(String email) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
+
     }
-    public void MarcarFinalizado(String nombre){
+
+
+    public boolean marcarComoCompletada(String nombre) {
         throw new UnsupportedOperationException("Clase aún no implementada.");
+
     }
-    public void consultarTodos(){
+
+
+    public List<ToDo> listarTareasPendientes() {
         throw new UnsupportedOperationException("Clase aún no implementada.");
+
     }
-    private void comprobarYEnviarAlerta(){
-        throw new UnsupportedOperationException("Clase aún no implementada.");
-    }
+
 }
