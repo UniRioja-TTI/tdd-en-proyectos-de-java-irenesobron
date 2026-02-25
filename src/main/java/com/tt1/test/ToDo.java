@@ -1,10 +1,10 @@
 package com.tt1.test;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ToDo {
     private String nombre;
     private String descripcion;
-    private Date dueDate;
+    private LocalDate dueDate;
     private boolean completado;
 
     public ToDo() {
@@ -13,7 +13,7 @@ public class ToDo {
         this.dueDate = null;
         this.completado = false;
     }
-    public ToDo(String nombre, String descripcion, Date dueDate, boolean completado) {
+    public ToDo(String nombre, String descripcion, LocalDate dueDate, boolean completado) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.dueDate = dueDate;
@@ -31,10 +31,10 @@ public class ToDo {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    public Date getDueDate() {
-        return dueDate;
+    public LocalDate getDueDate() {
+        return this.dueDate;
     }
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
     public boolean isCompletado() {

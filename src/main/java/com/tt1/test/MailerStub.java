@@ -8,7 +8,8 @@ public class MailerStub {
         this.email = email;
         this.mensaje = mensaje;
     }
-    boolean enviarCorreo(){
+
+    public boolean enviarCorreo(){
         throw new UnsupportedOperationException("Clase aún no implementada.");
     }
 
